@@ -23,7 +23,7 @@ Java-приложение для сокращения ссылок с консо
 1. Клонируйте репозиторий:
 ```bash
 git clone https://github.com/Tonknowled/URL_Shortener.git
-
+```
 2. Откройте проект в IntelliJ IDEA
 
 3. Запустите класс Main.java
