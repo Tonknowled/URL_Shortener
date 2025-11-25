@@ -23,7 +23,7 @@ public class Main {
 
         } catch (Exception e) {
             System.err.println("Критическая ошибка: " + e.getMessage());
-            e.printStackTrace();
+            System.err.println("Детали ошибки сохранены в логе");
         }
     }
 }

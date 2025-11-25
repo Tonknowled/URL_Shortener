@@ -29,25 +29,43 @@ public class ConsoleInterface {
             showMenu();
             String command = scanner.nextLine().trim();
 
-            if (command.equals("1") || command.equals("create")) {
-                createShortUrl();
-            } else if (command.equals("2") || command.equals("open")) {
-                openShortUrl();
-            } else if (command.equals("3") || command.equals("list")) {
-                listUserUrls();
-            } else if (command.equals("4") || command.equals("edit")) {
-                editUrl();
-            } else if (command.equals("5") || command.equals("delete")) {
-                deleteUrl();
-            } else if (command.equals("6") || command.equals("stats")) {
-                showStats();
-            } else if (command.equals("7") || command.equals("help")) {
-                showHelp();
-            } else if (command.equals("8") || command.equals("exit") || command.equals("quit")) {
-                System.out.println("До свидания!");
-                return;
-            } else {
-                System.out.println("Неизвестная команда. Введите 'help' для списка команд.");
+            switch (command.toLowerCase()) {
+                case "1":
+                case "create":
+                    createShortUrl();
+                    break;
+                case "2":
+                case "open":
+                    openShortUrl();
+                    break;
+                case "3":
+                case "list":
+                    listUserUrls();
+                    break;
+                case "4":
+                case "edit":
+                    editUrl();
+                    break;
+                case "5":
+                case "delete":
+                    deleteUrl();
+                    break;
+                case "6":
+                case "stats":
+                    showStats();
+                    break;
+                case "7":
+                case "help":
+                    showHelp();
+                    break;
+                case "8":
+                case "exit":
+                case "quit":
+                    System.out.println("До свидания!");
+                    return;
+                default:
+                    System.out.println("Неизвестная команда. Введите 'help' для списка команд.");
+                    break;
             }
         }
     }

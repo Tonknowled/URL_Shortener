@@ -1,5 +1,3 @@
-package test;
-
 import service.UrlShortenerService;
 import service.UserManager;
 import core.ShortLink;
@@ -35,7 +33,7 @@ public class UrlShortenerTest {
 
         } catch (Exception e) {
             System.out.println("❌ Ошибка тестирования: " + e.getMessage());
-            e.printStackTrace();
+            System.out.println("Детали ошибки: " + e.toString());
         }
     }
 }

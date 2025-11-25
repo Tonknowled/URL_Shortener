@@ -4,13 +4,13 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class ShortLink {
-    private String shortUrl;
-    private String longUrl;
-    private UUID userId;
+    private final String shortUrl;
+    private final String longUrl;
+    private final UUID userId;
     private int clickCount;
     private int maxClicks;
-    private LocalDateTime createdAt;
-    private LocalDateTime expiresAt;
+    private final LocalDateTime createdAt;
+    private final LocalDateTime expiresAt;
 
     public ShortLink(String shortUrl, String longUrl, UUID userId, int maxClicks, int hoursToLive) {
         this.shortUrl = shortUrl;
@@ -28,7 +28,6 @@ public class ShortLink {
     public UUID getUserId() { return userId; }
     public int getClickCount() { return clickCount; }
     public int getMaxClicks() { return maxClicks; }
-    public LocalDateTime getCreatedAt() { return createdAt; }
     public LocalDateTime getExpiresAt() { return expiresAt; }
 
     // Сеттеры
